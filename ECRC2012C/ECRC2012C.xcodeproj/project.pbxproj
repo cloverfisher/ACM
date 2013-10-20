@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C20A52601801EF0000935948 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C20A525F1801EF0000935948 /* main.c */; };
 		C20A52621801EF0000935948 /* ECRC2012C.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C20A52611801EF0000935948 /* ECRC2012C.1 */; };
+		C230ED96180B9BEA00B3339A /* File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C230ED94180B9BEA00B3339A /* File.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		C20A525C1801EF0000935948 /* ECRC2012C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ECRC2012C; sourceTree = BUILT_PRODUCTS_DIR; };
 		C20A525F1801EF0000935948 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C20A52611801EF0000935948 /* ECRC2012C.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ECRC2012C.1; sourceTree = "<group>"; };
+		C230ED94180B9BEA00B3339A /* File.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = File.cpp; path = ../../../../../Documents/MATLAB/File.cpp; sourceTree = "<group>"; };
+		C230ED95180B9BEA00B3339A /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = File.h; path = ../../../../../Documents/MATLAB/File.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				C20A525F1801EF0000935948 /* main.c */,
+				C230ED94180B9BEA00B3339A /* File.cpp */,
+				C230ED95180B9BEA00B3339A /* File.h */,
 				C20A52611801EF0000935948 /* ECRC2012C.1 */,
 			);
 			path = ECRC2012C;
@@ -118,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C20A52601801EF0000935948 /* main.c in Sources */,
+				C230ED96180B9BEA00B3339A /* File.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +231,7 @@
 				C20A52671801EF0000935948 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
