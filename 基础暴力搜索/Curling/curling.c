@@ -9,25 +9,33 @@ int function(int x, int y);
 int function(int x,int y)
 {
 	int tempx,tempy;
+	int flag = 0;
 	step++;
+	//printf(" %d,%d ",x,y);
 	if(step > 10)
+	{
+		step--;
 		return 0;
+	}
 	if(squire[y+1][x]==3||squire[y-1][x]==3||squire[y][x+1]==3||squire[y][x-1]==3)
 	{
 		if(step < minstep)
 			minstep = step;
+		flag = 1;
+		step--;
 		return 1;
 	}
 	tempx = x;
 	tempy = y;
 	if(squire[tempy][tempx+1]==0)
 	{
-///				printf(" x++ ");
+			//	printf(" x++ ");
 
 		while(squire[tempy][tempx+1]==0)
 			tempx++;	
 		if(squire[tempy][tempx+1]==3)
 				{
+					flag = 1;
 			if(step < minstep)
 				minstep = step;
 		}
@@ -35,8 +43,9 @@ int function(int x,int y)
 		{
 			squire[tempy][tempx+1]=0;
 			if(function(tempx,tempy)==1)
-				return 1;
-			else
+				flag = 1;
+			// 	return 1;
+			// else
 				squire[tempy][tempx+1]=1;
 		}	
 	}
@@ -44,11 +53,12 @@ int function(int x,int y)
 	tempy = y;
 	if(squire[tempy+1][tempx]==0)
 	{
-//		printf(" y++ ");
+		//printf(" y++ ");
 		while(squire[tempy+1][tempx]==0)
 			tempy++;	
 		if(squire[tempy+1][tempx]==3)
 		{
+			flag = 1;
 			if(step < minstep)
 				minstep = step;
 		}
@@ -56,8 +66,9 @@ int function(int x,int y)
 		{
 			squire[tempy+1][tempx]=0;
 			if(function(tempx,tempy)==1)
-				return 1;
-			else
+				flag = 1;
+			// 	return 1;
+			// else
 				squire[tempy+1][tempx]=1;
 		}	
 	}
@@ -65,11 +76,12 @@ int function(int x,int y)
 	tempy = y;
 	if(squire[tempy-1][tempx]==0)
 	{
-//		printf(" y-- ");
+	//	printf(" y-- ");
 		while(squire[tempy-1][tempx]==0)
 			tempy--;	
 		if(squire[tempy-1][tempx]==3)
 					{
+						flag = 1;
 			if(step < minstep)
 				minstep = step;
 		}
@@ -77,8 +89,9 @@ int function(int x,int y)
 		{
 			squire[tempy-1][tempx]=0;
 			if(function(tempx,tempy)==1)
-				return 1;
-			else
+				flag = 1;
+			// 	return 1;
+			// else
 				squire[tempy-1][tempx]=1;
 		}	
 	}
@@ -93,6 +106,7 @@ int function(int x,int y)
 			tempx--;	
 		if(squire[tempy][tempx-1]==3)
 			{
+				flag = 1;
 			if(step < minstep)
 				minstep = step;
 		}
@@ -100,14 +114,24 @@ int function(int x,int y)
 		{
 			squire[tempy][tempx-1]=0;
 			if(function(tempx,tempy)==1)
-				return 1;
-			else
+				flag =1;
+			// 	return 1;
+			// else
 				squire[tempy][tempx-1]=1;
 		}	
 	}
 //	printf("% d,%d ",tempx,tempy);
+	if(flag == 1)
+	{
+		step--;
+		return 1;
+	}
+	else
+	{
 	step--;
-	return 0;
+	return 0;	
+	}
+
 	
 
 }	
@@ -119,7 +143,8 @@ int main()
 	int x,y;
 	int i,j;
 	int sx,sy;	
-	scanf("%d %d",&x,&y);
+//	freopen("read.in","r",stdin);
+	scanf("%d %d\n",&x,&y);
 	while(x>0||y>0)
 	{
 	step = 0;	
@@ -139,6 +164,7 @@ int main()
 				squire[i][j] = 0;	
 			}
 		}	
+		getchar();
 
 	}	
 		// for(i=0;i<22;i++)
