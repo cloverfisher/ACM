@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "recursion:main.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell">
+            </PersistentString>
+            <PersistentString
+               value = "y">
+            </PersistentString>
+            <PersistentString
+               value = "x">
+            </PersistentString>
+            <PersistentString
+               value = "celllength">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "longestdecrease:main.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "lis[j]">
+            </PersistentString>
+            <PersistentString
+               value = "Ys[j]">
+            </PersistentString>
+            <PersistentString
+               value = "lis[i]">
+            </PersistentString>
+            <PersistentString
+               value = "Ys[i]">
+            </PersistentString>
+            <PersistentString
+               value = "max">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
